@@ -1,0 +1,98 @@
+[
+    {
+        "book_ID": 1,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "FICTION",
+        "publication_year": 1925,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "genre": "FICTION",
+        "publication_year": 1949,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 3,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "FICTION",
+        "publication_year": 1960,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 4,
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "genre": "SCIENCE",
+        "publication_year": 1988,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 5,
+        "title": "The Art of War",
+        "author": "Sun Tzu",
+        "genre": "HISTORY",
+        "publication_year": 500,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 6,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "genre": "ROMANCE",
+        "publication_year": 1813,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 7,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "genre": "FICTION",
+        "publication_year": 1951,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 8,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "genre": "FICTION",
+        "publication_year": 1937,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 9,
+        "title": "Moby Dick",
+        "author": "Herman Melville",
+        "genre": "FICTION",
+        "publication_year": 1851,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 10,
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "genre": "FICTION",
+        "publication_year": 1869,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 11,
+        "title": "Jane Eyre",
+        "author": "Charlotte Brontë",
+        "genre": "ROMANCE",
+        "publication_year": 1847,
+        "availability": "TRUE"
+    },
+    {
+        "book_ID": 12,
+        "title": "Wuthering Heights",
+        "author": "Emily Brontë",
+        "genre": "ROMANCE",
+        "publication_year": 1847,
+        "availability": "TRUE"
+    }
+]

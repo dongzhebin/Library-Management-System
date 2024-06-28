@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书详细介绍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff;
+        }
+        .book-detail {
+            margin-top: 20px;
+        }
+        .book-detail img {
+            max-width: 200px;
+        }
+        .book-detail p {
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const bookId = urlParams.get('id');
+
+            const books = [
+                { id: 1, title: "书籍1", author: "作者1", description: "这是书籍1的详细介绍。" },
+                { id: 2, title: "书籍2", author: "作者2", description: "这是书籍2的详细介绍。" },
+                { id: 3, title: "书籍3", author: "作者3", description: "这是书籍3的详细介绍。" }
+            ];
+
+            const book = books.find(b => b.id == bookId);
+
+            if (book) {
+                document.getElementById('book-title').textContent = book.title;
+                document.getElementById('book-author').textContent = `作者: ${book.author}`;
+                document.getElementById('book-description').textContent = book.description;
+                document.getElementById('book-image').src = `images/book${bookId}.jpg`;
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>图书详细介绍</h1>
+        </div>
+    </header>
+    <div class="container main">
+        <div class="book-detail">
+            <img id="book-image" src="images/book1.jpg" alt="Book Image">
+            <h2 id="book-title"></h2>
+            <p id="book-author"></p>
+            <p id="book-description"></p>
+        </div>
+    </div>
+</body>
+</html>

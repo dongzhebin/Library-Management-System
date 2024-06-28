@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel-buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .carousel-buttons button {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+        }
+        .carousel-buttons button:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+        function showAllBooks() {
+            window.location.href = 'available_books.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.carousel img');
+            let currentImageIndex = 0;
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.classList.remove('active');
+                    if (i === index) {
+                        img.classList.add('active');
+                    }
+                });
+            }
+
+            showImage(currentImageIndex);
+
+            function nextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                showImage(currentImageIndex);
+            }
+
+            function prevImage() {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                showImage(currentImageIndex);
+            }
+
+            setInterval(nextImage, 3000); // 每3秒切换一次图片
+
+            const nextButton = document.getElementById('next-button');
+            const prevButton = document.getElementById('prev-button');
+
+            nextButton.addEventListener('click', nextImage);
+            prevButton.addEventListener('click', prevImage);
+
+            images.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    window.location.href = `book_detail.html?id=${index + 1}`;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>图书管理系统</h1>
+        </div>
+    </header>
+    <div class="container main">
+        <section id="borrow-management">
+            <h2>借阅管理</h2>
+            <div class="button-container">
+                <button onclick="showAllBooks()">显示所有图书</button>
+            </div>
+        </section>
+        <div class="carousel">
+            <img src="images/book1.jpg" alt="Book 1" class="active">
+            <img src="images/book2.jpg" alt="Book 2">
+            <img src="images/book3.jpg" alt="Book 3">
+        </div>
+        <div class="carousel-buttons">
+            <button id="prev-button">上一张</button>
+            <button id="next-button">下一张</button>
+        </div>
+    </div>
+</body>
+</html>
