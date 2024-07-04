@@ -162,12 +162,103 @@ Project report, documenting design decisions, algorithms used, challenges faced,
 
 Presentation, showcasing system functionality and analysis results.
 
+### B-Tree:
+
+Theoretical Part:
+
+Definition of B-tree: A B-tree is a self-balancing tree data structure that maintains an ordered distribution of data. Unlike binary trees, each node in a
+B-tree can have multiple child nodes.
+
+Properties of B-trees:
+
+Nodes contain keys and pointers to child nodes.
+
+Each node contains between t and 2t-1 keys.
+
+All leaf nodes are at the same level.
+
+The keys in a node are arranged in ascending order.
+
+Basic Operations:
+
+Insertion: When the number of keys in a node exceeds 2t-1, the node splits, and the middle key moves up to the parent node.
+
+Deletion: The deletion operation require the tree to be rebalanced to maintain the properties of the B-tree.
+
+Search: The search operation recursively searches for an element in the node and its child nodes by comparing keys.
+
+Practical Part:
+
+Description of Classes and Methods:
+
+BTreeNode class: Defines the structure and basic operations of a B-tree node.
+
+BTree class: Provides methods for operations such as insertion, search, and deletion.
+
+Insertion Operation: The insert method recursively finds the appropriate insertion position in the node and its child nodes, and performs node splitting when necessary to maintain the balance of the B-tree.
+
+Search Operation: The search_tree method searches for a specific element in the node and its child nodes by comparing keys.
+
+Search by Title: The search_by_title method provides a convenient way to search for books by a keyword in the book title.
+
+Deletion Operation: The remove method is used to delete a specific key from the B-tree and require the tree to be rebalanced.
+
 ## 4. Implementation of Project
 
-Environment Setup
+### Environment Setup
 
 Visual Studio Code and Python extension 
 
 System: Windows 11
 
 We are using Visual Studio Code as our development environment and have installed the necessary libraries, including csv for file handling and unittest for testing.
+
+### Data Structure Implementation
+
+1.Implement the Book class with attributes such as book ID, title, author, genre, publication year, availability, and borrow count, and methods for printing, comparison, and equality.
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/92966ad3-3cdf-4c72-b037-6cfdae45ce0b)
+
+2.Implement the BTreeNode class with attributes such as keys (books), child nodes, and a flag for leaf nodes, and methods for splitting, adding keys, adding children, and determining size.
+
+3.Implement the BTree class with attributes such as minimum degree, root node, and methods for inserting, searching, traversing, and removing nodes.
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/fb3549cd-db42-4cb9-bd88-513a4decfc9e)
+
+### Library Class Implementation
+
+1.Initialize the Library class with a filename to read and write book data.
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/4e1e4374-416d-4e81-95aa-d2234552d4bc)
+
+2.Implement methods for reading the book dataset from a CSV file and writing the updated dataset 
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/0d09d2d9-0aca-462d-a014-45055abf35fe)
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/c64a3449-629c-48ee-af82-c8d95c1da61d)
+
+3.back to the file.
+
+4.Implement methods for reading and writing user data from and to a CSV file.
+
+5.Implement methods for creating a new user, logging in, and updating user data.
+
+6.Implement methods for adding a new book, displaying books, searching books, recommending books, and returning books.
+
+7.Implement methods for updating borrowing statistics and displaying recently borrowed books.
+
+### User Interface Implementation
+
+1.Create a main function that initializes a Library object and provides a loop for user interaction.
+
+2.Implement a menu-driven interface that prompts users for their choice of operation.
+
+3.Implement methods for handling user input and executing the chosen operation.
+
+### Testing
+
+Write unit tests for each method in the Book, BTreeNode, BTree, and Library classes.
+
+## 5.Running and Debugging of Project
+
+## 6.Summary
