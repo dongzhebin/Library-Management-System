@@ -205,9 +205,15 @@ Deletion Operation: The remove method is used to delete a specific key from th
 
 ## 4. Implementation of Project
 
+### The location of the source code：
+
+https://github.com/dongzhebin/Library-Management-System.git
+
 ### Environment Setup
 
 Visual Studio Code and Python extension 
+
+Pyqt5
 
 System: Windows 11
 
@@ -259,6 +265,121 @@ We are using Visual Studio Code as our development environment and have installe
 
 Write unit tests for each method in the Book, BTreeNode, BTree, and Library classes.
 
+### The implementation for recommendations.
+
+Find the most borrowed book: 
+
+First, define an internal function named update_most_borrowed that is used to update the book with the most borrowings. This function traverses all books using the traverse method and uses the nonlocal keyword to modify the variable most_borrowed_book. If the current book being traversed has been borrowed more times than the recorded maximum, then most_borrowed_book will be updated to the current book.
+
+Get books of the same genre: 
+
+Once the book with the most borrowings is found, the method retrieves the genre of that book. Next, another internal function named add_if_same_genre is defined to add books of the same genre to the recommendation list recommended_books. When adding books, it checks to ensure that the book is not the same as most_borrowed_book to avoid recommending duplicates.
+
+Return recommendation results: 
+
+If books of the same genre are found, they will be returned as the recommendation results. If no books of the same genre are found, a message indicating that no other books in the same genre were found will be returned. If no books are found during the traversal, a message indicating that no books were found will be returned.
+
+Exception handling:
+
+ If any exceptions occur while performing the above operations, the exception will be caught, the stack trace will be printed, and a message containing the exception information will be returned.
+
 ## 5.Running and Debugging of Project
 
+ Interface:
+
+ ![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/3e10a990-9947-4b7a-ab51-500ee9a8803d)
+
+ Register:
+
+ ![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/a46c1af4-5b1d-49b1-a40d-be9b9b6c4ad1)
+
+When registering, you need to enter the username, nickname, and password.
+
+Registration successful:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/e322047e-5315-4216-83f4-692995ac0bf9)
+
+Log in:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/5350d5c9-5736-416f-82dc-1b2b9c95be6d)
+
+When logging in, you need to enter your username and password
+
+ Log in successful:
+
+ ![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/b821e8bc-07bd-4fe0-807d-ea1ac048aedf)
+
+Search Book:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/5c513516-2470-47bd-b3b4-a68716ae45da)
+
+I searched for the word “war” and the books above are the results
+
+Add book:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/01f3b985-a142-4bf0-94ef-2640f62520d7)
+
+Here, I added a book with an ID of 100, with the title, author, and category of the book being zzz, zz, and z, respectively
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/cc4db7bd-a89b-4365-90fc-40634f0a983f)
+
+Modify book:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/68e52e65-f1ee-452f-a1f4-60149a9d770b)
+
+I have changed the name of the book with ID 100 to hhh.
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/f59a5c4e-458e-49f6-9344-0127fb775b04)
+
+Borrow book:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/b2215576-42e0-4b45-800a-2ae5ae0e60c0)
+
+Recommened book:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/a394f17a-96a4-4e58-9746-c7242f5b8dfb)
+
+I borrowed two books here, “1984” and “War and Peace”, and the books recommended above are based on this.
+
+Delete book:
+
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/bad52d89-e774-4265-843b-c4c8d6306530)
+
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/612489ac-a562-4e9f-9763-2030431500eb)
+
+Return book:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/f9b2e833-5aba-458b-bda5-87b2cef28924)
+
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/3f7dfc75-9eea-4f84-9339-fceb4d7dec52)
+
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/bdd104bc-e96e-462f-80e4-49313563ce4e)
+
+### Test:
+
+![image](https://github.com/dongzhebin/Library-Management-System/assets/173773038/ef01dc6e-53aa-4b14-8a39-eea49f537341)
+
+
+
+
 ## 6.Summary
+
+### Tips:
+
+Rui Guo:
+
+Learning Reflection:
+
+Recently, my group and I completed a task of developing a library system using the BTree data structure. This task not only deepened my understanding of BTree but also allowed me to apply this knowledge in real-world programming, from which I greatly benefited.
+
+Firstly, through this task, I gained a deeper understanding of BTree's node structure, balancing mechanisms, and operations such as searching and insertion. BTree is a self-balancing tree data structure that maintains data order and remains efficient during insert, delete, and search operations. This makes it very useful in large database systems where frequent read and write operations are required. In the project, we used BTree for indexing books, making the operations of searching and inserting books fast and efficient.
+
+Secondly, by collaborating with my group members, I learned how to better conduct teamwork and code division. During this process, we adopted agile development methods, regularly allocating tasks and checking progress to ensure the project was completed on time. We also ensured code quality and maintainability through code reviews and discussions. This collaborative approach not only improved work efficiency but also taught me a lot of soft skills beyond programming.
+
+Finally, through this task, I gained a deeper understanding and application of the Python programming language. We utilized Python's powerful libraries and tools such as unittest for unit testing, pandas for data processing, and matplotlib for data visualization, which greatly simplified our development process.
+
+In conclusion, this task not only significantly improved my technical skills but also provided me with valuable experience in teamwork and project management. This will lay a solid foundation for my future learning and work.
