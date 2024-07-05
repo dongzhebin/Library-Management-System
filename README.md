@@ -207,7 +207,7 @@ Deletion Operation: The remove method is used to delete a specific key from th
 
 ### The location of the source code：
 
-https://github.com/dongzhebin/Library-Management-System.git
+[https://github.com/dongzhebin/Library-Management-System.git]
 
 ### Environment Setup
 
@@ -368,6 +368,32 @@ Return book:
 
 ## 6.Summary
 
+### Division of Labor within the Group:
+
+Rui Guo:
+
+Responsible for writing code, completing the non-UI parts of library code independently, such as reading csv, adding books, borrowing books, recommending books, etc., helping and correcting the work of other students in the group after completing my own work
+
+Yanlin Li:
+
+Write recommended book code, summarize the code of team members, then debug and classify into the final version and run it successfully, write test code and successfully complete the test, and communicate with team members to debug and correct the code
+
+Peiqi Huang:
+
+In this library management system project, I was responsible for the development of the visual interface. My main tasks include the following aspects:
+
+Users register, users log in, find books, add books, delete books, change books, display all books, recommend books, borrow books and return books, at the same time I also made the visualization of B-Tree: real-time display of the B-Tree structure of books in the library, visual display of the organization of books. The B-Tree view is dynamically updated so that users can visually see how adding, removing, and finding books affects the B-Tree structure.
+
+Junhao Zhang:
+
+
+In the task, I participated in the initial task analysis and the completion of the book sorting display feature, and also assisted in the testing of the code, as well as writing the final report and summarizing the project.
+
+Zhebin Dong:
+
+Finishing the PPT and reponsible for extra features part: Interactive Interface  Enhancement, presentation,and distributing tasks and checking team work.
+
+
 ### Tips:
 
 Rui Guo:
@@ -383,3 +409,77 @@ Secondly, by collaborating with my group members, I learned how to better conduc
 Finally, through this task, I gained a deeper understanding and application of the Python programming language. We utilized Python's powerful libraries and tools such as unittest for unit testing, pandas for data processing, and matplotlib for data visualization, which greatly simplified our development process.
 
 In conclusion, this task not only significantly improved my technical skills but also provided me with valuable experience in teamwork and project management. This will lay a solid foundation for my future learning and work.
+
+Yanlin Li:
+
+During the development of this library management system, I gained extensive knowledge of data structures and algorithms, particularly in the use of B-trees. Here are my key reflections on this project:
+
+Importance of Data Structures:
+
+In this project, B-trees served as the primary data structure, demonstrating their efficiency in handling large datasets. Ensuring all nodes were at the same depth enabled operations (searching, insertion, deletion) in logarithmic time, while minimizing disk access—a crucial advantage for managing extensive data.
+
+Enhancement of Programming Skills:
+
+Implementing book management functionalities—including adding books, updating availability, searching by title, author, genre, and publication year, and displaying books alphabetically—significantly improved my programming skills. I learned to write clearer, more modular code and use unit testing to ensure code correctness and robustness.
+
+Challenges and Solutions:
+
+Throughout the project, I was responsible for debugging, testing, and integration, encountering various challenges. Initially, the complex and time-consuming nature of B-tree insertion and search operations required in-depth understanding and meticulous debugging. Addressing node splits and merges involved iterative testing and optimization. Moreover, ensuring compatibility among diverse functionalities demanded rigorous unit testing to ensure module independence and reliability. Successful code integration across different team-developed modules was achieved through effective communication and collaboration.
+
+Debugging Book Lending Functionality:
+
+Debugging the book lending feature posed several challenges, including intricate lending logic and ensuring data consistency during concurrent operations. Through rigorous unit testing and employing thread-safe techniques and transaction processing, I successfully resolved these issues, ensuring system stability across different operational scenarios. Detailed logging and breakpoint debugging expedited issue identification and resolution during debugging.
+
+Integration of Theory and Practice:
+
+This project not only allowed me to apply theoretical knowledge of data structures and algorithms in practice but also emphasized the importance of validating theoretical knowledge through practical implementation and adjustment.
+
+User Interface Design:
+
+In addition to backend implementation, I designed a simple graphical interface to showcase the library management system's functionalities. This experience provided insights into the challenges and joys of user interface design, teaching me how to present complex functionalities in a clear and intuitive manner to enhance user experience.
+
+Conclusion:
+
+Overall, this project deepened my understanding of data structures and algorithms while enhancing my programming and problem-solving abilities. I look forward to applying and expanding these skills in future projects.
+
+Peiqi Huang:
+
+In this library management system project, our team successfully developed a system to assist in managing and optimizing book organization, retrieval, and borrowing, utilizing B-Trees for storing and managing books, emphasizing their importance in organizing and accelerating search operations. Here, I will share some insights from the project.
+
+At the beginning of the project, our team clarified our respective responsibilities and divisions of labor. I was in charge of creating the visual interface, including functionalities such as user registration, login, book search, adding, deleting, and modifying books, displaying all books, recommending books, and borrowing and returning books. Additionally, I was responsible for implementing the real-time visualization of the B-Tree of books in the library.
+
+Close collaboration and effective communication among team members were key to the success of the project. Through regular team meetings and online discussions, we ensured the development progress and quality of each functional module. Whenever we encountered problems, we helped each other, brainstormed, and found solutions together.
+
+During the development process, we faced many technical challenges. For instance, how to use B-Tree to add and delete books and visualize it in real-time on the user interface was a difficult task. To address this, I learned and utilized various graphics libraries and algorithms, ultimately successfully implementing a dynamically updating B-Tree visualization interface, allowing users to observe the storage and management of books in real-time.
+
+To enhance user experience, we put a lot of effort into interface design and functionality implementation. In the book search feature, we implemented fuzzy search and intelligent recommendations, greatly facilitating user usage. In the book addition and deletion features, we designed a simple and clear operation interface, ensuring users could quickly get started. Furthermore, we optimized the layout and interaction of the interface, making the system more intuitive and user-friendly.
+
+Through this project, not only did I deepen my understanding of the B-Tree data structure, but I also learned how to apply theoretical knowledge to practical projects. By developing the user interface, I improved my skills in front-end development, especially in using PyQt to create graphical user interfaces.
+
+Although our project is largely complete, there are still areas for improvement. For example, we could further optimize the performance of the B-Tree to reduce query and update times, and enhance the aesthetics of the visualization interface. Additionally, we could incorporate more intelligent recommendation algorithms to improve the accuracy of book recommendations.
+
+Reflecting on the entire project experience, I deeply appreciate the importance of teamwork and technical accumulation. Through this project, I have learned a lot of new knowledge and enhanced my practical skills. This project experience will become a valuable asset for my future learning and work.
+
+Junhao Zhang:
+
+Project Reflection: Library Management System
+Throughout the development of the library management system project, I have gained a profound understanding of the importance of software development and the crucial role of teamwork in project success. This project has deepened my understanding of B-tree data structures and taught me how to apply theoretical knowledge to practical projects.
+
+At the beginning of the project, my understanding of B-tree structures and their working principles was not deep enough, which led to some difficulties in implementation. However, as I delved deeper into the research, I gradually grasped the advantages and applicable scenarios of B-trees and successfully applied them to the core functionalities of the library management system. This process made me understand the importance of combining theory with practice and the need for continuous learning and adjustment in practical projects.
+
+During the project development, I closely collaborated with my team members to solve numerous technical challenges. We had clear responsibilities, leveraged our respective strengths, and ensured the project’s progress and quality. At the same time, we actively communicated, shared experiences and insights, and collectively improved our technical skills. This spirit of teamwork has been invaluable to me and has made me cherish the power of teamwork even more.
+
+Through this project, I learned how to write clear and maintainable code, as well as how to write unit tests to ensure the correctness of the code. I also realized the importance of code standards and comments, and their role in the maintenance of the project in the later stages.
+Furthermore, this project has made me understand that software development is not just a technical issue but a comprehensive issue involving multiple aspects. During the project development, we need to consider user requirements, system performance, security, and other aspects to ensure the successful implementation of the project.
+
+In summary, this library management system project has been a rewarding experience for me. In the project, I not only improved my technical skills but also learned methods of teamwork, communication, and problem-solving. These experiences will have a profound impact on my future learning and career development.
+
+Zhebin Dong:
+
+Working on the Library Management System project has been an enriching and rewarding experience. Through this journey, I gained a deeper understanding of data structures, particularly the B-Tree, and their practical applications in managing large datasets efficiently. Implementing and integrating various functionalities such as book management, user authentication, lending processes, and personalized recommendations not only enhanced my programming skills but also improved my ability to solve complex problems. Collaborating with my teammates taught me the importance of clear communication, task delegation, and teamwork, as we each contributed unique strengths to achieve our common goal. Developing the graphical user interface using PyQt5 added another layer of complexity and satisfaction, as it made our system more user-friendly and accessible. Overall, this project has solidified my technical knowledge, fostered my creativity, and prepared me for future challenges in software development and systems design.
+
+### Difficulties and Solution of Problems:
+
+In the project, we encountered some difficulties: At the beginning, due to different divisions of labor, there was a lack of communication between members’ codes, and they did not achieve interaction. In the end, through member communication and rewriting the code, we completed the linkage between the GUI and the management system.
+
+During code testing, we encountered many problems, such as the code not finding the path, the connection between different test classes, and the invocation of classes. After asking the teacher or searching online, we finally resolved these issues.
